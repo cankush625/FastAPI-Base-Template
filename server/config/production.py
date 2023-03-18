@@ -17,7 +17,7 @@ class ProductionSettings(Settings):
 
     DATABASE_HOST: str
     DATABASE_USER: str
-    DATABASE_PASSWORD: str
+    DATABASE_PASS: str
     DATABASE_NAME: str
     DATABASE_PORT: int
     SQLALCHEMY_DATABASE_URI: Optional[PostgresDsn] = None
