@@ -1,1 +1,2 @@
-# # Common constants file for usage throughout the app
+class CeleryQueue:
+    DEFAULT_KEY = "celery"
