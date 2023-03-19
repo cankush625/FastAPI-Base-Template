@@ -1,6 +1,6 @@
-from typing import List, Optional
+from typing import List
 
-from pydantic import AnyHttpUrl, PostgresDsn, EmailStr
+from pydantic import AnyHttpUrl
 
 from server.config.base import Settings
 
@@ -15,20 +15,3 @@ class LocalSettings(Settings):
     # e.g: '["http://localhost", "http://localhost:4200", "http://localhost:3000", \
     # "http://localhost:8080", "http://local.dockertoolbox.tiangolo.com"]'
     BACKEND_CORS_ORIGINS: List[AnyHttpUrl] = []
-
-    # Database
-    DATABASE_HOST: str
-    DATABASE_USER: str
-    DATABASE_PASS: str
-    DATABASE_NAME: str
-    DATABASE_PORT: int
-    SQLALCHEMY_DATABASE_URI: Optional[PostgresDsn] = None
-
-    # Email
-    SMTP_TLS: bool = True
-    SMTP_PORT: Optional[int] = None
-    SMTP_HOST: Optional[str] = None
-    SMTP_USER: Optional[str] = None
-    SMTP_PASSWORD: Optional[str] = None
-    EMAILS_FROM_EMAIL: Optional[EmailStr] = None
-    EMAILS_FROM_NAME: Optional[str] = None
