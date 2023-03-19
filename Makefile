@@ -15,7 +15,7 @@ run-server:
 	python3 server/main.py
 
 run-celery-worker:
-	celery -A server worker --beat --scheduler fast --loglevel=info
+	celery -A server worker --beat --loglevel=info
 
 run-celery-beat-with-flower:
 
