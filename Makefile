@@ -11,6 +11,12 @@ dev-setup:
 dev-setup-down:
 	docker-compose down
 
+run-makemigrations:
+	alembic -c server/migrations/alembic.ini revision --autogenerate
+
+run-migrations:
+	alembic -c server/migrations/alembic.ini upgrade head
+
 run-server:
 	python3 server/main.py
 
