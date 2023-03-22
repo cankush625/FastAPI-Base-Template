@@ -30,7 +30,7 @@ class Settings(BaseSettings):
         return {"queue": "celery"}
 
     # Celery
-    CELERY_BROKER_URL: str = "amqp://guest:guest@localhost:5672//"
+    CELERY_BROKER_URL: str = "redis://redis:6379/0"
     CELERYD_SOFT_TIME_LIMIT = 30 * 60
     CELERYD_TIME_LIMIT = 31 * 60
 
