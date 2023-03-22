@@ -12,7 +12,7 @@ from server.common.database.session import DATABASE_URI  # noqa
 
 # Import base database model or database models inorder to register them
 # Need to import all models inorder to track them
-from server.common.database.base_class import BaseModel  # noqa
+from server.common.database.base import BaseModel  # noqa
 from server.core.auth.models import User  # noqa
 
 # this is the Alembic Config object, which provides
